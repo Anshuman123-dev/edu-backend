@@ -23,19 +23,19 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-	  origin: ["https://edu-frontend-blond.vercel.app/", "http://localhost:3000"],
-	  credentials: true, // Allow credentials (cookies, authorization headers, etc.)
-	  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // Allowed methods
-	  allowedHeaders: [
-		"Content-Type",
-		"Authorization",
-		"X-Requested-With",
-		"Accept",
-		"Origin",
-		"Access-Control-Allow-Credentials",
-	  ],
-	})
-  );
+		origin: ["https://edu-frontend-blond.vercel.app", "http://localhost:3000"],
+		credentials: true,
+		methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+		allowedHeaders: [
+		  "Content-Type",
+		  "Authorization",
+		  "X-Requested-With",
+		  "Accept",
+		  "Origin",
+		  "Access-Control-Allow-Credentials",
+		],
+	  })
+	  );
 
 app.use(
 	fileUpload({
